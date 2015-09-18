@@ -1,5 +1,5 @@
 script "autoFolio.ash"
-import <zlib.ash>
+notify Giestbar;
 
 /*******************************************************
 *	autoFolio
