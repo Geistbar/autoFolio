@@ -3,7 +3,7 @@ notify Giestbar;
 
 /*******************************************************
 *	autoFolio
-*	r6
+*	r7
 *
 *	Completes the folio quest using predefined CCS and 
 *	outfits. Leaves the final boss to the user to defeat.
@@ -95,6 +95,6 @@ void main()
 	
 	// Return state
 	cli_execute("ccs default");
-	if (item_amount($itemp[psychoanalytic jar]) > jar)
+	if (item_amount($item[psychoanalytic jar]) > jar)
 		print("You gained a psychoanalytic jar while in Dis.","green");
 }
