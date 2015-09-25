@@ -3,7 +3,7 @@ notify Giestbar;
 
 /*******************************************************
 *	autoFolio
-*	r5
+*	r6
 *
 *	Completes the folio quest using predefined CCS and 
 *	outfits. Leaves the final boss to the user to defeat.
@@ -66,6 +66,7 @@ void main()
 	if (equipped_item($slot[back]) == $item[Buddy Bjorn] && have_familiar($familiar[Grimstone Golem]))
 		bjornify_familiar($familiar[Grimstone Golem]);
 	cli_execute("swim sprints");
+	int jar = item_amount($item[psychoanalytic jar]);	// For SKF
 	
 	// Double-check item amounts
 	foreach it in $items[dangerous jerkcicle, clumsiness bark, jar full of wind]
@@ -94,4 +95,6 @@ void main()
 	
 	// Return state
 	cli_execute("ccs default");
+	if (item_amount($itemp[psychoanalytic jar]) > jar)
+		print("You gained a psychoanalytic jar while in Dis.","green");
 }
